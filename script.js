@@ -14,8 +14,8 @@ const funcButoon = () => {
     button.style.display = `inline-Block`; button.style.padding = `10px 20px`;
     button.style.position = `absolute`; button.style.top = `10%`; button.style.left = `42%`;
 };
-funcH1();
-funcButoon();
+// funcH1();
+// funcButoon();
 
 // Use class dan method
 class Gaek {
@@ -99,16 +99,6 @@ class Gaek {
     }
 };
 
-// use addevent
-const addFunc = () => {
-    button.addEventListener(`click`, function () {
-        gaek.table();
-        gaek.header();
-        gaek.header1();
-        gaek.header2();
-        gaek.data();
-    })
-};
 const gaek = new Gaek({
     head: [`Bulan`],
     head1: [`Hasil panen`],
@@ -128,6 +118,17 @@ const gaek = new Gaek({
         [`Desember`, `345 Kg`, `300 Kg`, `600 Kg`]
     ]
 });
-addFunc();
 
-// export {funcH1, funcButoon, gaek}
+// use addeventliten and include class
+const addFunc = () => {
+    button.addEventListener(`click`, function () {
+        gaek.table();
+        gaek.header();
+        gaek.header1();
+        gaek.header2();
+        gaek.data();
+    })
+};
+// addFunc();
+
+export {funcH1, funcButoon, addFunc} ;
